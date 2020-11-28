@@ -11,5 +11,5 @@ export class AccountComponent {
   @Input() account: Account | null = null;
 
   // todo: fix generic type
-  @Output() amountChange = new EventEmitter<string>();
+  @Output() amountChange = new EventEmitter<number>();
 }

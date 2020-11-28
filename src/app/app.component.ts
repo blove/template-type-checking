@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { accounts, customers, orders } from '../../data/data.json';
-import { Customer } from './models';
+import { Account, Customer } from './models';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +12,12 @@ export class AppComponent {
   customers: Customer[] = customers;
 
   // todo: specify return type
-  accountForCustomer(customer: Customer) {
+  accountForCustomer(customer: Customer): Account | null {
     // todo: return account
-    return orders.find(account => account.customerId === customer.id);
+    return accounts.find(account => account.customerId === customer.id) ?? null;
   }
 
-  onAmountChange(amount: string): void {
+  onAmountChange(amount: number): void {
     console.log(amount);
   }
 }
