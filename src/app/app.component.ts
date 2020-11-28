@@ -13,12 +13,11 @@ export class AppComponent {
 
   // todo: specify return type
   accountForCustomer(customer: Customer) {
-    // todo: return account not order
-    // return orders.find(account => account.customerId === customer.id);
-    return accounts.find(account => account.customerId === customer.id) ?? null;
+    // todo: return account
+    return orders.find(account => account.customerId === customer.id);
   }
 
-  onAmountChange(amount: number): void {
+  onAmountChange(amount: string): void {
     console.log(amount);
   }
 }

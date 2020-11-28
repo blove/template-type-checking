@@ -10,5 +10,6 @@ import { Account } from '../models';
 export class AccountComponent {
   @Input() account: Account | null = null;
 
-  @Output() amountChange = new EventEmitter<number>();
+  // todo: fix generic type
+  @Output() amountChange = new EventEmitter<string>();
 }
