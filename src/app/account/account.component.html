@@ -1,0 +1,4 @@
+<div class="flex flex-col items-center my-4 mx-auto">
+  <input class="text-4xl text-black text-center max-w-full appearance-none focus:outline-none" [ngModel]="account?.amount" (ngModelChange)="amountChange.emit($event)" type="number" />
+  <div class="text-lg text-gray-400">{{ account?.name }}</div>
+</div>
